@@ -1,0 +1,150 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.weather-container {
+  width: 100%;
+  max-width: 1200px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.search-bar button {
+  padding: 12px 15px;
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Main Weather */
+.main-weather {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.weather-icon {
+  font-size: 4rem;
+  margin-right: 20px;
+}
+
+.weather-info h1 {
+  font-size: 3.5rem;
+  margin: 0;
+}
+
+.weather-info p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Weekly Forecast */
+.weekly-forecast {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.forecast-day {
+  text-align: center;
+}
+
+.forecast-icon {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+/* Highlights */
+.highlights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.highlight-card {
+  padding: 15px;
+  background: #c5cad0;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-card h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.highlight-card p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .weekly-forecast {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .forecast-day {
+    flex: 1 1 calc(33.33% - 10px);
+    margin: 5px;
+  }
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #007bff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
